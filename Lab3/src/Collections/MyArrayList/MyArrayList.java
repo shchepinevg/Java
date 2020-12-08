@@ -1,10 +1,12 @@
 package Collections.MyArrayList;
 
-import Collections.MyLinkedList.ListNode;
-
 public class MyArrayList<T> {
     private Object[] array;
     private int countOfElem = 0;
+
+    public int size() {
+        return countOfElem;
+    }
 
     public void add(T element) {
         Object[] newArray = new Object[countOfElem + 1];
@@ -17,7 +19,7 @@ public class MyArrayList<T> {
     }
 
     public void remove(int index) {
-        if (index < 0 && index > countOfElem - 1) {
+        if (index < 0 || index > countOfElem - 1) {
             System.out.println("No such element exists");
             return;
         }
@@ -34,11 +36,44 @@ public class MyArrayList<T> {
         countOfElem--;
     }
 
-    public T getElement(int index) {
+    public void remove(T elem) {
+        if (countOfElem < 1) {
+            System.out.println("No such element exists");
+            return;
+        }
+
+        int countElemForDel = 0;
+        for (int i = 0; i < countOfElem; i++) {
+            if (array[i] == elem)
+                countElemForDel++;
+        }
+
+        Object[] newArray = new Object[countOfElem - countElemForDel];
+        int k = 0;
+        for (int i = 0; i < countOfElem; i++) {
+            if (array[i] != elem) {
+                newArray[k] = array[i];
+                k++;
+            }
+        }
+
+        array = newArray;
+        countOfElem -= countElemForDel;
+    }
+
+    public T get(int index) {
         if (index > -1 && index < countOfElem) {
             return (T)array[index];
         } else {
             return null;
         }
+    }
+
+    public void clear() {
+        for (int i = 0; i < countOfElem; i++) {
+            this.remove(0);
+        }
+
+        countOfElem = 0;
     }
 }

@@ -1,25 +1,37 @@
 import Collections.MyArrayList.MyArrayList;
 import Collections.MyLinkedList.MyLinkedList;
+import Fruits.Apple;
+import Fruits.Fruit;
+import Fruits.Orange;
+import Objects.Box;
 
 public class Main {
 
     public static void main(String[] args) {
-        // MyLinkedList
-        MyLinkedList<String> list = new MyLinkedList<String>();
-        list.add("Hello");
-        list.add("World");
-        list.add("!!!");
-        list.remove(1);
-        System.out.println(list.getElement(1));
+        Apple apple = new Apple(1.2f);
+        Orange orange = new Orange(1.5f);
 
-        System.out.println();
+        MyArrayList<Fruit> apples = new MyArrayList<Fruit>();
+        MyArrayList<Fruit> oranges = new MyArrayList<Fruit>();
 
-        // MyArrayList
-        MyArrayList<String> array = new MyArrayList<String >();
-        array.add("This");
-        array.add("is");
-        array.add("the code");
-        array.remove(1);
-        System.out.println(array.getElement(1));
+        for (int i = 0; i < 5; i++)
+            apples.add(apple);
+
+        for (int i = 0; i < 3; i++)
+            oranges.add(orange);
+
+        Box box1 = new Box(apples);
+        Box box2 = new Box(oranges);
+
+        if (box1.compare(box2))
+            System.out.println("Boxes are the same weight");
+        else
+            System.out.println("Boxes are the different weight");
+
+        box1.pour(box2);
+        box2.clearBox();
+        box1.pour(box2);
+        System.out.println(box1.getWeight());
+        box2.getFruits().get(0).showDescription();
     }
 }

@@ -1,19 +1,19 @@
 package Collections.MyLinkedList;
 
-public class ListNode {
+public class Node {
     private Object element;
-    private ListNode next;
+    private Node next;
 
-    public ListNode(Object element, ListNode next) {
+    public Node(Object element, Node next) {
         this.element = element;
         this.next = next;
     }
 
-    public ListNode getNext() {
+    public Node getNext() {
         return this.next;
     }
 
-    public void setNext(ListNode node) {
+    public void setNext(Node node) {
         this.next = node;
     }
 
