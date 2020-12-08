@@ -1,4 +1,4 @@
-package phones;
+package Assets.Phone;
 
 public class Phone {
     private String number;

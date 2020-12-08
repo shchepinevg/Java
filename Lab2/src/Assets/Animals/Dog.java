@@ -1,4 +1,4 @@
-package animals;
+package Assets.Animals;
 
 public class Dog extends Animal {
     private String breed;

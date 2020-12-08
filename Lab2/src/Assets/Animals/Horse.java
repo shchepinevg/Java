@@ -1,4 +1,4 @@
-package animals;
+package Assets.Animals;
 
 public class Horse extends Animal {
     private boolean isHorseShod;

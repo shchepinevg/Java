@@ -1,4 +1,4 @@
-package students;
+package Assets.Students;
 
 public class Aspirant extends Student {
     private String titleOfScientificWork;

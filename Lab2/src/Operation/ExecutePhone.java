@@ -1,7 +1,9 @@
-import phones.Phone;
+package Operation;
 
-public class Main {
-    public static void main(String[] args) {
+import Assets.Phone.Phone;
+
+public class ExecutePhone {
+    public void PerformProcess() {
         Phone phone1 = new Phone("88005553535", "xiaomi", 283.3);
         Phone phone2 = new Phone("84951235685", "iphone", 100.0);
         Phone phone3 = new Phone("83954726586", "honor", 333.8);
@@ -35,4 +37,3 @@ public class Main {
         phone1.sendMessage("84951235685", "83954726586", "86643756465");
     }
 }
-

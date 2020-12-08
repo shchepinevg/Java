@@ -1,4 +1,4 @@
-package animals;
+package Assets.Animals;
 
 public class Veterinarian {
     public void treatAnimal(Animal animal) {

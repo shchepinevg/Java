@@ -1,4 +1,4 @@
-package animals;
+package Assets.Animals;
 
 public class Cat extends Animal {
     private String eyeColor;
