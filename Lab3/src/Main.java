@@ -1,5 +1,4 @@
 import Collections.MyArrayList.MyArrayList;
-import Collections.MyLinkedList.MyLinkedList;
 import Fruits.Apple;
 import Fruits.Fruit;
 import Fruits.Orange;
